@@ -8,13 +8,13 @@ module.exports = (Franz) => {
     let directCount = 0;
     document.querySelectorAll(directMessageSelector).forEach((node) => {
       // Hangouts Chat overrides the muted indicator when there is a direct mention
-      if (!node.closest('content[role="listitem"]').querySelector(muteSelector)) {
+      if (!node.closest('span[role="listitem"]').querySelector(muteSelector)) {
         directCount += 1;
       }
     });
     let indirectCount = 0;
     document.querySelectorAll(indirectMessageSelector).forEach((node) => {
-      if (!node.closest('content[role="listitem"]').querySelector(muteSelector)) {
+      if (!node.closest('span[role="listitem"]').querySelector(muteSelector)) {
         indirectCount = +1;
       }
     });
